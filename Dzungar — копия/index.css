@@ -1,0 +1,437 @@
+.limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inria-serif-bold-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+    background-color: #e7c6b0;
+    top: 0;
+}
+
+ .logo {
+  font-family: "Limelight", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+
+nav .nav-links {
+  display: flex;
+  gap: 30px; /* расстояние между пунктами */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 28px;
+  margin-left: 540px; /* выравнивание по левому краю */
+}
+
+nav .nav-links li a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav .nav-links li a:hover {
+  color: #555; /* эффект при наведении */
+}
+
+.insta-icon {
+  width: 38px;   /* размер иконки */
+  height: 38px;
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+
+.insta-icon:hover {
+  transform: scale(1.2); /* эффект увеличения при наведении */
+}
+
+/* Галерея работ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2 колонки */
+  gap: 20px;
+  margin-top: 40px;
+  padding: 0 100px; /* отступы по бокам */
+ 
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* Увеличение на 5% */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: #f8f0eb ;
+   justify-content: center;  
+   align-items: center;
+}
+.text {
+font-family: "Limelight", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+
+}
+
+/* === Стили для модального окна === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modal-close {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-family: "Inria Serif", serif;
+  font-size: 18px;
+  background-color: #e7c6b0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-close:hover {
+  background-color: #d6b5a0;
+}
+
+/* === Адаптивная верстка для мобильных устройств === */
+
+@media (max-width: 768px) {
+  /* Общие отступы и размеры */
+  .navbar {
+    padding: 20px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  nav .nav-links {
+    margin-left: 0;
+    gap: 15px;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .insta-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .text {
+    font-size: 24px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* планшет — 2 в ряд */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr; /* телефон — 1 в ряд */
+    padding: 20px;
+  }
+}
+
+  .gallery img {
+    border-radius: 6px;
+  }
+
+  .modal-content {
+    max-width: 95%;
+  }
+
+  .modal-close {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* Ещё более узкие экраны (например, iPhone SE) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  nav .nav-links {
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .text {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .gallery {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .modal-close {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+.contacts-layout {
+  display: flex;
+  justify-content: flex-start; /* элементы идут слева направо */
+  align-items: flex-start;     /* выравнивание по верхнему краю */
+  gap: 150px;                   /* отступ между картинкой и текстом */
+  margin: 40px;
+}
+
+.image-block img {
+  width: 600px;   /* размер картинки */
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px; /* необязательно, но красиво */
+}
+
+/* правый блок (заголовок, текст и иконки) */
+.text-block {
+  display: flex;
+  flex-direction: column;  /* сверху вниз */
+ /* всё выравнено по левому краю внутри */
+  max-width: 500px;
+}
+
+/* соцсети вертикально */
+.social-links {
+  display: flex;
+  flex-direction: column; /* иконки одна под другой */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* строка: иконка + текст */
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: black;
+  font-family: "Inria Serif", serif;
+  font-size: 18px;
+}
+
+
+
+
+
+.text2 {
+  font-family: "Limelight", sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.text3 {
+  font-family: "Inria Serif", serif;
+  font-size: 35px;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin-right: 10px; /* отступ между иконками */
+
+  margin-top: 20px; /* отступ сверху */
+  width: 50px;   /* размер иконки */
+  height: 50px;
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* эффект увеличения при наведении */
+}
+
+.social-name {
+  font-family: "Inria Serif", serif;
+  font-size: 40px;
+  color: #0c0c0c;
+  text-decoration: none; /* убираем подчеркивание */
+}
+  .social-name:hover {
+    color: #555; /* эффект при наведении */
+  }
+
+.textportfolio {
+  
+  font-family: "Inria Serif", serif;
+  font-size: 25px;
+  color: #020202;
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.textvideo {
+  
+  font-family: "Inria Serif", serif;
+  font-size: 25px;
+  color: #020202;
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+video {
+  width: 60%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 30px
+  
+}
+
+.text4 {
+  font-family: "Inria Serif", serif;
+  font-size: 30px;
+  color: #0b0b0b;
+  text-align: center;
+  margin-top: 10px;
+  
+}
+
+.my-button {
+  width: 150px;
+  height: 50px;
+  background-color: #887050; 
+  color: rgb(251, 249, 249);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  
+  margin: 30px auto 0; /* сверху 30px, по бокам авто */
+}
+
+
+.my-button:hover {
+  background-color: #4e3c26;
+}
+
+
+/* ----- Адаптивка для телефонов ----- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .main-content.contacts-layout {
+    flex-direction: column;   /* Картинка сверху, текст снизу */
+    align-items: center;
+    padding: 10px;
+  }
+
+  .text-block {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .textportfolio {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .social-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+  }
+}
